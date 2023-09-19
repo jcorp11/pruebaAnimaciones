@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* background-color: rgb(111, 109, 109); */
+  /* border: 1px solid black; */
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-OpenSans {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "filtros"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #25527b;
+  padding: 10px 10%;
+  width: 100%;
+}
+
+.left-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logos {
+  width: 48px;
+}
+
+.sidebar {
+  grid-area: filtros;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #e1dada;
+  gap: 10px;
+}
+.filtros {
+  width: 100%;
+  height: 3rem;
+  padding: 0 15px;
+}
+.tituloFiltro {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.main {
+  grid-area: main;
+  padding: 10px 40px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 20px;
+  place-items: center;
+  height: auto;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+.producto {
+  display: flex;
+  box-shadow: 1px 1px 5px 1px rgb(193, 191, 191);
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 350px;
+  height: 426px;
+  gap: 20px;
+
+  background-color: rgb(255, 255, 255);
+
+  padding: 15px;
+  transition: all 1s ease-out;
+}
+.producto:hover {
+  transform: scale(1.1);
+  transform: rotate(360deg);
+  box-shadow: 1px 1px 5px 1px rgb(241, 239, 121);
+}
+
+.producto__nombre {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.producto__img {
+  width: 80%;
+}
+
+.producto__boton {
+  padding: 10px 15px;
+  background-color: #25527b;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+
+.button-list {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbutton {
+  padding: 10px 10px;
+  color: rgb(49, 49, 210);
+  border: solid 1px rgb(178, 178, 181);
+  background-color: white;
+}
+
+.arrows {
+  width: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #032c63;
+  color: white;
+}
+
+.footer-logos svg {
+  width: 38px;
+}
+.menu {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .product-grid {
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  }
+  body {
+    grid-template-areas:
+      "navbar filtros filtros filtros filtros"
+      "navbar main main main main"
+      "footer main main main main";
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: min(315px, 20%) auto;
+  }
+  .navbar {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style-type: none;
+    gap: 10px;
+
+    & a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+
+  .burger {
+    display: none;
+  }
+  .footer p {
+    text-align: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+}
