@@ -109,7 +109,7 @@ body {
 .producto:hover {
   transform: scale(1.1);
   transform: rotate(360deg);
-  box-shadow: 1px 1px 5px 1px rgb(241, 239, 121);
+  box-shadow: 1px 1px 5px 1px rgb(251, 248, 48);
 }
 
 .producto__nombre {
