@@ -74,7 +74,7 @@ body {
 .main {
   grid-area: main;
   padding: 10px 40px;
-  height: 80vh;
+  height: 81vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,10 +93,10 @@ body {
 
 .producto {
   display: flex;
-  box-shadow: 1px 1px 5px 1px rgb(193, 191, 191);
+  box-shadow: 1px 1px 5px 1px rgb(36, 30, 151);
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   width: 350px;
   height: 426px;
   gap: 20px;
@@ -152,9 +152,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: 10px 0 0 0;
   background-color: #0a243d;
   color: white;
+}
+
+.footer-logos {
+  padding-bottom: 10px;
 }
 
 .footer-logos svg {
@@ -172,6 +176,8 @@ body {
   .product-grid {
     /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+    overflow-y: auto;
+    scrollbar-gutter: unset;
   }
   body {
     grid-template-areas:
