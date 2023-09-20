@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: #25527b;
+  background-color: #0c1b29;
   padding: 10px 10%;
   width: 100%;
 }
@@ -57,7 +57,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
-  background-color: #e1dada;
+  background-color: #34345b;
   gap: 10px;
 }
 .filtros {
@@ -66,8 +66,9 @@ body {
   padding: 0 15px;
 }
 .tituloFiltro {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1.5rem;
+  color: aqua;
 }
 
 .main {
@@ -100,7 +101,7 @@ body {
   height: 426px;
   gap: 20px;
 
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(96, 97, 119);
 
   padding: 15px;
   transition: all 1s ease-out;
@@ -117,6 +118,7 @@ body {
 }
 .producto__img {
   width: 80%;
+  max-height: 75%;
 }
 
 .producto__boton {
@@ -151,7 +153,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 15px 0;
-  background-color: #032c63;
+  background-color: #0a243d;
   color: white;
 }
 
@@ -160,6 +162,10 @@ body {
 }
 .menu {
   display: none;
+}
+
+.main {
+  background-color: #193045;
 }
 
 @media (min-width: 576px) {
